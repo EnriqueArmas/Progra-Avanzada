@@ -1,0 +1,78 @@
+# Progra-Avanzada
+Labs
+
+¿Que es una interfaz?
+ Conexión funcional entre dos sistemas, programas, dispositivos o componentes de cualquier tipo, 
+ que proporciona una comunicación de distintos niveles permitiendo el intercambio de información
+
+¿Que es una clase abstracta?
+Una clase abstracta solo puede ser usada como clase base para otras clases, pero no puede ser instanciada para crear un objeto.
+¿Que diferencia hay entre herencia e interfaces?
+Un interface es simplemente una lista de métodos no implementados, además puede incluir la declaración de constantes. Herencia puede incluir métodos implementados
+y no implementados o abstractos, miembros dato constantes y otros no constantes.
+¿Cual es la diferencia entre pila, cola y lista?
+
+public class Rectangule implements Shape {
+Private double width;
+    private double lenght;
+    
+    public Rectangule (double width, double lenght){
+        this.width = width;
+        this.lenght =lenght;
+    }
+    
+    public double getArea(){
+        return this.width * this.lenght;
+    }
+    public String toString(){
+        return "Rectangule [ widht " + this.width
+            + " lenght " + this.lenght
+            + " area " + this.getArea() + "]"; 
+    }
+}
+
+public interface Shape {
+    public double getArea();
+    public String toString();
+}
+
+public class Rectangule implements Shape {
+    
+    private double width;
+    private double lenght;
+    
+    public Rectangule (double width, double lenght){
+        this.width = width;
+        this.lenght =lenght;
+    }
+    
+    public double getArea(){
+        return this.width * this.lenght;
+    }
+    public String toString(){
+        return "Rectangule [ widht " + this.width
+            + " lenght " + this.lenght
+            + " area " + this.getArea() + "]"; 
+    }
+}
+
+public class Triangule implements Shape {
+    private double base;
+    private double altura;
+    
+    public Triangule (double base, double altura){
+        this.base = base;
+        this.altura =altura;
+    }
+    
+    public double getArea(){
+        return (base*altura)/2;
+    }
+    public String toString(){
+        return "Triangulo [ base " + this.base
+            + " altura " + this.altura
+            + " area " + this.getArea() + "]"; 
+        
+    }
+}
+
