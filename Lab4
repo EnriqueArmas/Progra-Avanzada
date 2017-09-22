@@ -1,0 +1,66 @@
+#include <iostream>
+ int sumar (int a, int b){ //declaracion metodo suma y retorno de operacion
+     return a+b;
+ }
+ int restar (int a, int b){ //declaracion metodo resta y retorno de operacion
+     return a-b;
+ }
+ int multiplicar (int a, int b){ //declaracion metodo multiplicar
+ //retorna multiplicacion de dos numeros
+     return a*b;
+ }
+ int dividir (int a, int b){ //declaracion metodo dividir y retorno de operacion
+     return a/b;
+ }
+ void sumapunteros(int , int , int* );
+ void restapunteros(int , int , int*);
+  void multpunteros(int , int, int*);
+  void divpunteros(int , int, int*);
+int main()
+{
+    //operaciones aritmeticas
+    int resultado4 = sumar (5,7);
+  std::cout << "La suma es = " << resultado4 << std::endl;
+int resultado1 = restar (12,7);
+  std::cout << "La resta es = " <<resultado1 << std::endl;
+  int resultado2 = multiplicar (5,7);
+  std::cout << "La multiplicacion es = " <<resultado2 << std::endl;
+  int resultado3 = dividir (12,3);
+  std::cout << "La division es = " <<resultado3 << std::endl;
+  //paso por punteros
+  int resultado= -1;
+  sumapunteros(8,5,&resultado);
+  std::cout << "*Resultado suma puntero es " << resultado << std::endl;
+  
+  
+  
+  restapunteros(8,5,&resultado);
+  std::cout << "*Resultado resta puntero es " << resultado << std::endl;
+
+  multpunteros(8,5,&resultado);
+  std::cout << "*Resultado resta puntero es " << resultado << std::endl;
+
+divpunteros(8,5,&resultado);
+  std::cout << "*Resultado resta puntero es " << resultado << std::endl;
+
+  return 0;
+  
+}
+// declaracion de metodos y operaciones entre punteros
+void sumapunteros(int a, int b, int * resultado){
+    *resultado= a+b;
+}
+void restapunteros(int a, int b, int * resultado)
+{
+    *resultado = a-b;
+}
+void multpunteros(int a, int b, int * resultado)
+{
+    *resultado = a*b;
+}
+void divpunteros(int a, int b, int * resultado)
+{
+    *resultado = a/b;
+}
+
+El uso de punteros me ha servido para aprender acerca sobre el paso de referencia en C++.
