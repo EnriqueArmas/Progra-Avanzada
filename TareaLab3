@@ -1,3 +1,27 @@
+ULTIMO EJERCIO DE TRABAJO EN CLASE
+int tabla(int numero);  //METODO DE ARREGLO Y TABLA
+
+int numero;
+    std::cout<<"\t==========> TABLA DE MULTIPLICAR <=========\n\n\n"<<std::endl;
+	std::cout<<"Numero de tabla a multiplicar"<< std::endl;
+	cin>>numero;
+	 tabla(numero);
+  return 0;
+}
+int tabla(int numero)
+{
+	 int espacios[10];
+	 int indice;
+ 
+	 for(indice=0; indice < 10; indice++)
+	 espacios[indice] = numero*(indice+1);
+ std::cout<<"Tabla del "<< numero << std::endl;
+	
+	 for(indice=0; indice < 10; indice++)
+	 std::cout<<numero<< " x  "<< (indice+1) <<"= "<< espacios[indice] <<std::endl;
+
+------------------------------------------
+TAREA 
 #include <iostream>
 #include <stdio.h>
 using namespace std; 
@@ -62,3 +86,5 @@ for (i=0; i<tamanio-1; i++)
 }
  return 0;
  }
+
+*** Hecho en VisualStudio***
